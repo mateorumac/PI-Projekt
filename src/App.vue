@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Početna</router-link> |
+    <router-link to="/onama">O nama</router-link> |
+    <router-link to="/cjenik">Cjenik</router-link> |
     <router-link to="/login">Prijava</router-link>
   </nav>
   <router-view/>
