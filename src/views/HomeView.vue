@@ -21,6 +21,9 @@ Izgled nam je svima važan i prvi dojmovi se brzo pamte i dugo traju. Ako ste po
   h1{
     font-family: "biancha";
   }  
+  h2{
+    font-family: "biancha";
+  } 
   .tekst{
     text-align: center;
   }
