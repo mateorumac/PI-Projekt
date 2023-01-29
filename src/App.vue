@@ -19,14 +19,16 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 25px;
+  background-color: #FFB6C1;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #000000;
+    
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: white;
     }
   }
 }
