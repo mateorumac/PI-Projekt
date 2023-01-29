@@ -1,30 +1,45 @@
 <template>
   <div class="home">
-    <h1> Beauty by Ana </h1>
+    <img src="naslov.png" alt="tittle">
   </div>
   <div>
   <p> carousel position </p>
   </div>
-  <div class="slika">
-    <img src="ana.jpg" alt="Ana">
+  <div class="container">
+  <div class="image">
+    <img class="ana" src="ana.jpg" alt="Ana">
   </div>
-<div class="tekst">
-  <p> KOZMETIČKI SALON • PULA </p>
+<div class="text">
 <h2> TRETMANI LICA I TIJELA U PULI </h2>
-<p>Profesionalna usluga i stručnost naših zaposlenika vašoj koži će, kao najvećem organu našeg tijela, dati ono što joj je potrebno kako bi postala i ostala zdrava i lijepa, a vaše tijelo zadržalo vitalnost i njegovan izgled. <br><br>
-
-Izgled nam je svima važan i prvi dojmovi se brzo pamte i dugo traju. Ako ste pod stresom, umorni ili jednostavno želite uživati i opustiti se dođite u naš salon . Uz stručni rad s vrhunskom kozmetikom brinemo o vašoj ljepoti i zdravlju.</p>
-</div>
+<p><i>Profesionalna usluga i stručnost naših zaposlenika vašoj koži će, kao najvećem organu našeg tijela, dati ono što joj je potrebno kako bi postala i ostala zdrava i lijepa, a vaše tijelo zadržalo vitalnost i njegovan izgled. <br><br><br>
+Izgled nam je svima važan i prvi dojmovi se brzo pamte i dugo traju. Ako ste pod stresom, umorni ili jednostavno želite uživati i opustiti se dođite u naš salon . Uz stručni rad s vrhunskom kozmetikom brinemo o vašoj ljepoti i zdravlju.</i></p>
+</div> </div>
 </template>
 
 <style>
-  h1{
-    font-family: "biancha";
-  }  
   h2{
-    font-family: "biancha";
+    margin-top: -50px;
+    margin-bottom: 40px;
   } 
-  .tekst{
-    text-align: center;
+  .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+  .text{
+    font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   }
+  .image{
+    flex-basis: 40%
+  }
+  .ana {
+  height: 500px;
+  width: 500px;
+}
+img {
+  padding-top: 10px;
+}
 </style>
