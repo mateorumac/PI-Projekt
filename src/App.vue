@@ -7,6 +7,9 @@
     <router-link to="/login">Prijava</router-link>
   </nav>
   <router-view/>
+  <footer>
+    <span>Potražite nas na društvenim mrežama</span>
+  </footer>
 </template>
 
 <style lang="scss">
@@ -19,10 +22,13 @@
 }
 
 nav {
+  
   padding: 25px;
   background-color: #FFB6C1;
+  
 
   a {
+    text-decoration:none;
     font-weight: bold;
     color: #000000;
     
@@ -32,4 +38,13 @@ nav {
     }
   }
 }
+
+footer {
+  padding: 25px;
+  background-color: #FFB6C1;
+  // position: fixed;
+  left: 0;
+  bottom: 0;
+  // width: 100%;
+  text-align: center;}
 </style>
