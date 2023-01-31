@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="image1">
-      <img src="naslov.png" alt="tittle" align="left">
+      <img class="image2" src="naslov.png" alt="tittle" align="left">
     </div>
     <router-link to="/">Početna</router-link> |
     <router-link to="/onama">O nama</router-link> |
@@ -57,4 +57,8 @@ footer {
     max-width: 100%;
     float: left;
   }
+  .image2 {
+  padding-top: 10px;
+
+}
 </style>

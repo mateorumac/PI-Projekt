@@ -31,7 +31,7 @@
 }
 
   .image{
-    background-color: blue;
+     background-color: blue;
     width: 100%;
     float: left;
   }
@@ -49,7 +49,7 @@
   background-color: red;
   }
 
-img {
+.image2 {
   padding-top: 10px;
 
 }
