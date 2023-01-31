@@ -1,5 +1,8 @@
 <template>
   <nav>
+    <div class="image1">
+      <img src="naslov.png" alt="tittle" align="left">
+    </div>
     <router-link to="/">Početna</router-link> |
     <router-link to="/onama">O nama</router-link> |
     <router-link to="/cjenik">Cjenik</router-link> |
@@ -23,7 +26,7 @@
 
 nav {
   
-  padding: 25px;
+  padding: 29px;
   background-color: #FFB6C1;
   
 
@@ -47,4 +50,11 @@ footer {
   bottom: 0;
   color: #000000;
   text-align: center;}
+
+  .image1{
+    // background-color: yellow;
+    margin-top: -1.7%;
+    max-width: 100%;
+    float: left;
+  }
 </style>
