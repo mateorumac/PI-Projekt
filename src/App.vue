@@ -30,8 +30,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 29px;
   background-color: #FFB6C1;
+
+    a {
+    text-decoration:none;
+    font-weight: bold;
+    color: #000000;
+    
+
+    &.router-link-exact-active {
+      color: white;
+    }
+  }
 }
 
 .logo img {
