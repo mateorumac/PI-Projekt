@@ -16,11 +16,11 @@
         <div class="line3"></div>
       </div>
       <ul v-if="navOpen">
-          <li><router-link to="/">Početna</router-link></li>
-          <li><router-link to="/onama">O nama</router-link></li>
-          <li><router-link to="/cjenik">Cjenik</router-link></li>
-          <li><router-link to="/kontakt">Kontakt</router-link></li>
-          <li><router-link to="/login">Prijava</router-link></li>
+          <li @click="toggleNav"><router-link to="/">Početna</router-link></li>
+          <li @click="toggleNav"><router-link to="/onama">O nama</router-link></li>
+          <li @click="toggleNav"><router-link to="/cjenik">Cjenik</router-link></li>
+          <li @click="toggleNav"><router-link to="/kontakt">Kontakt</router-link></li>
+          <li @click="toggleNav"><router-link to="/login">Prijava</router-link></li>
         </ul>
   </nav>
   <router-view/>
@@ -140,13 +140,14 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 45px;
-    
+    left:50%;
     background-color:#FFB6C1;
-    width: 40%;
+    width: 25%;
+    
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transform: translateX(100%);
+    transform: translateX(50%);
     transition: all 0.3s ease-in-out;
   }
 
