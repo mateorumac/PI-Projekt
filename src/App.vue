@@ -10,6 +10,11 @@
       <li><router-link to="/kontakt">Kontakt</router-link></li>
       <li><router-link to="/login">Prijava</router-link></li>
     </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
   </nav>
   <router-view/>
   <footer>
@@ -32,18 +37,9 @@ nav {
   align-items: center;
   padding: 29px;
   background-color: #FFB6C1;
-
-    a {
-    text-decoration:none;
-    font-weight: bold;
-    color: #000000;
-    
-
-    &.router-link-exact-active {
-      color: white;
     }
-  }
-}
+
+
 
 .logo img {
   height: 50px;
@@ -62,13 +58,34 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
   font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+
+    &.router-link-exact-active {
+      color: white;
+    }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.line1, .line2, .line3 {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
 }
 
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+
+  .burger {
+    display: block;
   }
 }
 
