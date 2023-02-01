@@ -18,7 +18,15 @@
   </nav>
   <router-view/>
   <footer>
-    <span>Potražite nas na društvenim mrežama</span>
+    <div class="social-media">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p>Copyright &copy; {{ currentYear }} Beauty by Ana</p>
   </footer>
 </template>
 
@@ -38,8 +46,6 @@ nav {
   padding: 29px;
   background-color: #FFB6C1;
     }
-
-
 
 .logo img {
   height: 50px;
@@ -79,6 +85,25 @@ nav {
   margin: 6px 0;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 29px;
+  background-color: #FFB6C1;
+  color: #000000;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media a {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -87,15 +112,15 @@ nav {
   .burger {
     display: block;
   }
-}
 
-footer {
-  padding: 30px;
-  background-color: #FFB6C1;
-  // position: fixed;
-  left: 0;
-  bottom: 0;
-  color: #000000;
-  text-align: center;}
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-media {
+    margin-bottom: 20px;
+  }
+}
 
 </style>
