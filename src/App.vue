@@ -10,11 +10,18 @@
       <li><router-link to="/kontakt">Kontakt</router-link></li>
       <li><router-link to="/login">Prijava</router-link></li>
     </ul>
-    <div class="burger">
+    <div class="burger" @click="toggleNav">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
+      <ul v-if="navOpen">
+          <li><router-link to="/">Početna</router-link></li>
+          <li><router-link to="/onama">O nama</router-link></li>
+          <li><router-link to="/cjenik">Cjenik</router-link></li>
+          <li><router-link to="/kontakt">Kontakt</router-link></li>
+          <li><router-link to="/login">Prijava</router-link></li>
+        </ul>
   </nav>
   <router-view/>
   <footer>
@@ -43,9 +50,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 29px;
+  padding: 25px;
   background-color: #FFB6C1;
     }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .logo img {
   height: 50px;
@@ -89,7 +103,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 29px;
+  padding: 25px;
   background-color: #FFB6C1;
   color: #000000;
 }
@@ -121,6 +135,42 @@ footer {
   .social-media {
     margin-bottom: 20px;
   }
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    
+    background-color:#FFB6C1;
+    width: 40%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    color:#000000;
+    font-weight: bold;
+    
+  }
 }
 
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      navOpen: false
+    };
+  },
+  methods: {
+    toggleNav() {
+      this.navOpen = !this.navOpen;
+    }
+  }
+};
+</script>
