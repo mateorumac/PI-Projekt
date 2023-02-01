@@ -49,8 +49,5 @@
   background-color: red;
   }
 
-.image2 {
-  padding-top: 10px;
 
-}
 </style>

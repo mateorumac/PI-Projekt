@@ -1,13 +1,15 @@
 <template>
   <nav>
-    <div class="image1">
-      <img class="image2" src="naslov.png" alt="tittle" align="left">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
     </div>
-    <router-link to="/">Početna</router-link> |
-    <router-link to="/onama">O nama</router-link> |
-    <router-link to="/cjenik">Cjenik</router-link> |
-    <router-link to="/kontakt">Kontakt</router-link> |
-    <router-link to="/login">Prijava</router-link>
+    <ul class="nav-links">
+      <li><router-link to="/">Početna</router-link></li>
+      <li><router-link to="/onama">O nama</router-link></li>
+      <li><router-link to="/cjenik">Cjenik</router-link></li>
+      <li><router-link to="/kontakt">Kontakt</router-link></li>
+      <li><router-link to="/login">Prijava</router-link></li>
+    </ul>
   </nav>
   <router-view/>
   <footer>
@@ -25,20 +27,37 @@
 }
 
 nav {
-  
-  padding: 29px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   background-color: #FFB6C1;
-  
+}
 
-  a {
-    text-decoration:none;
-    font-weight: bold;
-    color: #000000;
-    
+.logo img {
+  height: 50px;
+}
 
-    &.router-link-exact-active {
-      color: white;
-    }
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
 }
 
@@ -51,14 +70,4 @@ footer {
   color: #000000;
   text-align: center;}
 
-  .image1{
-    // background-color: yellow;
-    margin-top: -1.7%;
-    max-width: 100%;
-    float: left;
-  }
-  .image2 {
-  padding-top: 10px;
-
-}
 </style>
