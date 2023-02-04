@@ -3,7 +3,7 @@
   <div class="slide-track">
     <!--     ------5 img---- -->
     <div class="slide">
-      <img src="https://images.pexels.com/photos/8066167/pexels-photo-8066167.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" href="">
+      <img src="leda.jpg" href="">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -13,7 +13,7 @@
 
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/4348323/pexels-photo-4348323.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="lice.jpg">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/7419661/pexels-photo-7419661.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="noga.jpg">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/4999940/pexels-photo-4999940.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="nokti.jpg">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/7223805/pexels-photo-7223805.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="guza.jpg">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -51,7 +51,7 @@
 
     <!--     ----same 5 img---- -->
     <div class="slide">
-      <img src="https://images.pexels.com/photos/8066167/pexels-photo-8066167.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="leda.jpg">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -60,10 +60,10 @@
       </div>
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/4348323/pexels-photo-4348323.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="lice.jpg">
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/7419661/pexels-photo-7419661.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="noga.jpg">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -72,10 +72,10 @@
       </div>
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/4999940/pexels-photo-4999940.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="nokti.jpg">
     </div>
     <div class="slide">
-      <img src="https://images.pexels.com/photos/7223805/pexels-photo-7223805.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+      <img src="guza.jpg">
       <div class="details">
         <div class="content">
           <h1>heading</h1>
@@ -242,4 +242,3 @@ img:hover {
       }
 
     </style>
-
