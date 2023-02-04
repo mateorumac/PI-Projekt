@@ -1,8 +1,5 @@
 <template>
-
     <div id="app">
-      
-
       <div class="container1">
         <div class="row">
           
@@ -22,9 +19,7 @@
             <p> <br> Naš uspjeh dugujemo konstantnom poboljšavanju vlastitih usluga i ono najvažnije, iznimnom zadovoljstvu naših klijenata.</p>
           </div>
         </div>
-      </div>
-
-      
+      </div>     
     </div>
     </template>
 <style>
