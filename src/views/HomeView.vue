@@ -4,16 +4,21 @@
         <div class="row">
           
           <div class="column left">
-            <!-- Add your main content here -->
-            <img src="ana.jpg" alt="Ana" style="width: 80%; margin-left:-5%">
+            
+            <img src="ana.jpg" alt="Ana">
           </div>
 
           <div class="column right">
             <h2> TRETMANI LICA I TIJELA U PULI </h2>
-            <p><i>Profesionalna usluga i stručnost naših zaposlenika vašoj koži će, kao najvećem organu našeg tijela,  dati ono što joj je potrebno kako bi postala i  ostala zdrava i lijepa, a vaše tijelo zadržalo  
-          vitalnost i njegovan izgled. <br><br><br>
-            Izgled nam je svima važan i prvi dojmovi  se brzo pamte i dugo traju. Ako ste pod stresom, umorni ili jednostavno želite uživati i  opustiti se dođite u naš salon.  <br> Uz stručni rad s vrhunskom kozmetikom 
-            brinemo o vašoj ljepoti i zdravlju.</i></p>
+            <p class="homepage"><i>Profesionalna usluga i stručnost naših zaposlenika <br> vašoj koži će, 
+               kao najvećem organu <br> našeg tijela,  dati ono što joj je potrebno <br> 
+              kako bi postala i  ostala zdrava i lijepa, <br> a vaše tijelo zadržalo  
+              vitalnost i njegovan izgled. <br><br><br>
+            Izgled nam je svima važan i prvi dojmovi <br>  se brzo pamte i dugo traju. 
+            <br> Ako ste pod stresom, umorni ili jednostavno 
+             želite <br> uživati i  opustiti se dođite u naš salon.
+            <br> Uz stručni rad s vrhunskom kozmetikom 
+             <br>brinemo o vašoj ljepoti i zdravlju.</i></p>
           </div>
         </div>
       </div>     
@@ -42,10 +47,22 @@
         padding: 10px;
       }
       
-h2{
-    margin-top: 13%;
-    margin-bottom: 40px;
-  }
+      h2{
+      margin-top: 13%;
+      margin-bottom: 35px;
+      font-size: 35px;
+      }
+
+      .homepage {
+          font-size: 25px;
+          margin:5%;
+          
+      }
+
+      img {
+        max-width: 80%;
+        height: auto;
+          }
 
       @media (max-width: 600px) {
         
@@ -55,15 +72,7 @@ h2{
         }
       }
 
-      p{
-        margin:5%;
-        padding-top: 5%;
-      }
-
-      img {
-  max-width: 70%;
-  height: auto;
-}
+      
     </style>
 
 
