@@ -77,13 +77,13 @@
 
           <div class="column right">
             <h2> TRETMANI LICA I TIJELA U PULI </h2>
-            <p class="homepage"><i>Profesionalna usluga i stručnost naših zaposlenika <br> vašoj koži će, 
-               kao najvećem organu <br> našeg tijela,  dati ono što joj je potrebno <br> 
-              kako bi postala i  ostala zdrava i lijepa, <br> a vaše tijelo zadržalo  
+            <p class="homepage"><i>Profesionalna usluga i stručnost naših <br>zaposlenika  vašoj koži će, 
+               kao najvećem <br> organu  našeg tijela,  dati ono što joj je potrebno <br> 
+              kako bi postala i  ostala zdrava i lijepa,  a <br> vaše tijelo zadržalo  
               vitalnost i njegovan izgled. <br><br><br>
-            Izgled nam je svima važan i prvi dojmovi <br>  se brzo pamte i dugo traju. 
-            <br> Ako ste pod stresom, umorni ili jednostavno 
-             želite <br> uživati i  opustiti se dođite u naš salon.
+            Izgled nam je svima važan i prvi <br> dojmovi   se brzo pamte i dugo traju. 
+            <br> Ako ste pod stresom, umorni ili jednostavno <br>
+             želite  uživati i  opustiti se dođite u naš salon.
             <br> Uz stručni rad s vrhunskom kozmetikom 
              <br>brinemo o vašoj ljepoti i zdravlju.</i></p>
              <button class="join-button" @click="redirectToPage"><b>Rezerviraj termin</b></button>

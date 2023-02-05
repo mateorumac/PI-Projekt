@@ -108,7 +108,7 @@ h1{
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
-  border-bottom: 2px solid #FFB6C1;
+  border-bottom: 3px solid #FFB6C1;
   padding: 10px;
 }
 
