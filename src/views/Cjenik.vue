@@ -1,9 +1,9 @@
 <template>
 
   <div class="container3">
-    <h1> Lice </h1>
+    <h1>Lice</h1>
     <ul class="pricelist">
-      <li v-for="item in items" :key="item.name" class="item">
+      <li v-for="(item, index) in items" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>
@@ -14,7 +14,7 @@
   <div class="container3">
     <h1> Nokti </h1>
     <ul class="pricelist">
-      <li v-for="item in items2" :key="item.name" class="item">
+      <li v-for="(item, index) in items2" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items2.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>
@@ -25,7 +25,7 @@
   <div class="container3">
     <h1> Stopala </h1>
     <ul class="pricelist">
-      <li v-for="item in items3" :key="item.name" class="item">
+      <li v-for="(item, index) in items3" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items3.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>
@@ -36,7 +36,7 @@
   <div class="container3">
     <h1> Depilacija </h1>
     <ul class="pricelist">
-      <li v-for="item in items4" :key="item.name" class="item">
+      <li v-for="(item, index) in items4" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items4.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>
@@ -47,7 +47,7 @@
   <div class="container3">
     <h1> Masaža </h1>
     <ul class="pricelist">
-      <li v-for="item in items5" :key="item.name" class="item">
+      <li v-for="(item, index) in items5" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items5.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>
@@ -58,7 +58,7 @@
   <div class="container3">
     <h1> Delux shape </h1>
     <ul class="pricelist">
-      <li v-for="item in items6" :key="item.name" class="item">
+      <li v-for="(item, index) in items6" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items6.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>
@@ -69,7 +69,7 @@
   <div class="container3">
     <h1> Šminkanje </h1>
     <ul class="pricelist">
-      <li v-for="item in items7" :key="item.name" class="item">
+      <li v-for="(item, index) in items7" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items7.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>
@@ -79,6 +79,12 @@
 </template>
     
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+h1{
+  font-family: 'Great Vibes', cursive;
+  font-size: 45px;
+}
 .container3 {
   padding-top: 3%;
   padding-bottom: 3%;
@@ -97,13 +103,22 @@
   overflow: hidden;
 }
 
-li.item {
+.item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
   border-bottom: 2px solid #FFB6C1;
   padding: 10px;
+}
+
+.no-bottom-border {
+  border-bottom: none;
+}
+
+span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
