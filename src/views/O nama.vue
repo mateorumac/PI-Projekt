@@ -6,17 +6,23 @@
           <div class="column left">
             <!-- Add your main content here -->
             <img src="salon2.jpg" alt="salon" style="width: 80%; margin-left:-5%">
-            <p class="about">Naš salon opremljen je po visokim standardima, pružajući klijentima ugodnu i toplu atmosferu. 
-            <br> Svi naši klijenti dobiju najbolju profesionalnu uslugu za što se brine naš stručni i talentirani tim.</p> 
+            <p class="about">Naš salon opremljen je po visokim standardima, 
+              pružajući klijentima ugodnu i toplu atmosferu. 
+            <br> Svi naši klijenti dobiju najbolju profesionalnu uslugu 
+            za što se brine naš stručni i talentirani tim.</p> 
  <img src="salon3.jpg" alt="salon" style="width: 80%;">
     
           </div>
 
           <div class="column right">
             <p class="about">Salon ljepote Ana nalazi se u Puli. <br>
-                Našim klijentima nudimo usluge njege lica, masaže, depilacije, njege ruku, oblikovanja tijela, a imamo i odjel prodaje preparativne i dekorativne kozmetike.</p>
+                Našim klijentima nudimo usluge njege lica, masaže, 
+                depilacije, njege ruku, oblikovanja tijela, a imamo i odjel prodaje 
+                preparativne i dekorativne kozmetike.</p>
             <img src="salon1.jpg" alt="salon" style="width: 80%;">
-            <p> <br> Naš uspjeh dugujemo konstantnom poboljšavanju vlastitih usluga i ono najvažnije, iznimnom zadovoljstvu naših klijenata.</p>
+            <p class="about"> <br> Naš uspjeh dugujemo konstantnom poboljšavanju 
+            vlastitih usluga i ono najvažnije, iznimnom zadovoljstvu naših klijenata.</p>
+            <p class="about"> RADNO VRIJEME </p>
           </div>
         </div>
       </div>     

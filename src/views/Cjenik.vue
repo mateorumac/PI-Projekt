@@ -121,7 +121,7 @@ span {
   font-size: 18px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   li.item {
     flex-direction: column;
     align-items: center;
