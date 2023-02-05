@@ -1,7 +1,6 @@
 <template>
 <div class="slider">
   <div class="slide-track">
-    <!--     ------5 img---- -->
     <div class="slide">
       <img src="leda.jpg" href="">
       <div class="details">
@@ -39,7 +38,6 @@
       </div>
     </div>
 
-    <!--     ----same 5 img---- -->
     <div class="slide">
       <img src="leda.jpg">
       <div class="details">
