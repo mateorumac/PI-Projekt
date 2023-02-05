@@ -86,7 +86,7 @@
              želite <br> uživati i  opustiti se dođite u naš salon.
             <br> Uz stručni rad s vrhunskom kozmetikom 
              <br>brinemo o vašoj ljepoti i zdravlju.</i></p>
-             <button class="join-button" @click="redirectToPage">Rezerviraj termin</button>
+             <button class="join-button" @click="redirectToPage"><b>Rezerviraj termin</b></button>
           </div>
         </div>
       </div>     

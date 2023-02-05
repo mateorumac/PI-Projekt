@@ -52,7 +52,7 @@ input {
   border: 1px solid #ddd;
 }
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #FFB6C1;
   color: white;
   padding: 15px 23px;
   font-size: 20px;
@@ -62,7 +62,7 @@ button[type="submit"] {
   margin-top: 30px;
 }
 button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #ff99a8;
 }
 </style>
 
