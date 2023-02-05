@@ -1,4 +1,5 @@
 <template>
+
   <div class="container5">
     <h2 class="title">Prijava</h2>
     <form @submit.prevent="submitForm">
@@ -23,20 +24,21 @@
   padding: 40px;
   background-color: #f5f5f5;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  
 }
 .title {
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
 }
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 label {
   font-size: 14px;

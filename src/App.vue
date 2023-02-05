@@ -1,7 +1,8 @@
 <template>
   <nav>
     <div class="logo">
-      <img src="logo.png" alt="Logo">
+      <a href="/">
+      <img src="logo.png" alt="Logo"> </a>
     </div>
     <ul class="nav-links">
       <li><router-link to="/">Početna</router-link></li>

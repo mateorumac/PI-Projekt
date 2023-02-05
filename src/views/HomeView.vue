@@ -6,9 +6,7 @@
       <img src="leda.jpg" href="">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
 
     </div>
@@ -16,36 +14,28 @@
       <img src="lice.jpg">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
     </div>
     <div class="slide">
       <img src="noga.jpg">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
     </div>
     <div class="slide">
       <img src="nokti.jpg">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
     </div>
     <div class="slide">
       <img src="guza.jpg">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
     </div>
 
@@ -54,9 +44,7 @@
       <img src="leda.jpg">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
     </div>
     <div class="slide">
@@ -66,9 +54,7 @@
       <img src="noga.jpg">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
     </div>
     <div class="slide">
@@ -78,9 +64,7 @@
       <img src="guza.jpg">
       <div class="details">
         <div class="content">
-          <h1>heading</h1>
-          <p>this is a paragrapgh. nice to meet u dear. </p>
-        </div>
+          </div>
       </div>
     </div>
   </div>
@@ -156,7 +140,7 @@
   height: 320px;
   margin: auto;
   position: relative;
-  width: 65%;
+  width: 75%;
   display: grid;
   place-items: center;
   overflow: hidden;

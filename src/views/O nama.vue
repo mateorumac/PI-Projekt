@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <div class="container1">
+      <div class="container2">
         <div class="row">
           
           <div class="column left">
@@ -27,7 +27,7 @@
         box-sizing: border-box;
         
       }
-      .container1 {
+      .container2 {
         max-width: 100%;
         margin: 0 auto;
       }
@@ -56,7 +56,7 @@
         padding-top: 5%;
       }
 
-      img {
+      .column left, right img {
   max-width: 60%;
   height: auto;
 }
