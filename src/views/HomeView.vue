@@ -119,6 +119,7 @@
       margin-top: 8%;
       margin-bottom: 35px;
       font-size: 38px;
+      
       }
 
       .homepage {
@@ -218,8 +219,8 @@ img:hover {
 
   .join-button {
   padding: 20px 40px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #FFB6C1;
+  color: black;
   border-radius: 10px;
   border: none;
   font-size: 18px;
