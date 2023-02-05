@@ -34,7 +34,7 @@
           <i class="fab fa-instagram"></i>
         </a>
       </div>
-      <p>Copyright &copy; {{ currentYear }} Beauty by Ana</p>
+      <p>Copyright 2023 Beauty by Ana</p>
   </footer>
 </template>
 

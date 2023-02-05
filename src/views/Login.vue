@@ -4,8 +4,8 @@
     <h2 class="title">Prijava</h2>
     <form @submit.prevent="submitForm">
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" v-model="form.email" />
+        <label for="username">Korisničko ime</label>
+        <input type="text" id="username" v-model="form.username" />
       </div>
       <div class="form-group">
         <label for="password">Lozinka</label>
@@ -21,15 +21,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  
+  max-width: 700px;
+  padding-bottom: 70px;
+  margin: 40px auto;
 }
 .title {
-  margin-bottom: 20px;
-  font-size: 32px;
+  margin-bottom: 45px;
+  font-size: 38px;
   font-weight: bold;
   color: #000000;
 }
@@ -37,28 +39,27 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  width: 100%;
-  max-width: 500px;
 }
 label {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 input {
-  padding: 10px;
-  font-size: 14px;
+  padding: 15px;
+  font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
 button[type="submit"] {
   background-color: #4CAF50;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 23px;
+  font-size: 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  margin-top: 30px;
 }
 button[type="submit"]:hover {
   background-color: #3e8e41;
@@ -70,15 +71,15 @@ export default {
   data() {
     return {
       form: {
-        email: "",
+        username: "",
         password: "",
       },
     };
   },
   methods: {
     submitForm() {
-      // Add code to submit the form data to your server here
-      console.log(this.form);
+      console.log('Username:', this.form.username);
+      console.log('Password:', this.form.password);
     },
   },
 };
