@@ -88,6 +88,7 @@
              želite <br> uživati i  opustiti se dođite u naš salon.
             <br> Uz stručni rad s vrhunskom kozmetikom 
              <br>brinemo o vašoj ljepoti i zdravlju.</i></p>
+             <button class="join-button" @click="redirectToPage">Rezerviraj termin</button>
           </div>
         </div>
       </div>     
@@ -117,7 +118,7 @@
       }
       
       h2{
-      margin-top: 13%;
+      margin-top: 10%;
       margin-bottom: 35px;
       font-size: 35px;
       }
@@ -217,6 +218,23 @@ img:hover {
   color: white;
 }    
 
+  .join-button {
+  padding: 20px 40px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
       @media (max-width: 600px) {
         
         .left,
@@ -226,3 +244,14 @@ img:hover {
       }
 
     </style>
+
+<script>
+export default {
+  methods: {
+    redirectToPage() {
+      window.location.href = '/kontakt';
+    }
+  }
+};
+</script>
+    
