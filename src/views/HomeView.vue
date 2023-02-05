@@ -118,9 +118,9 @@
       }
       
       h2{
-      margin-top: 10%;
+      margin-top: 8%;
       margin-bottom: 35px;
-      font-size: 35px;
+      font-size: 38px;
       }
 
       .homepage {
