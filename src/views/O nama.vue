@@ -22,13 +22,15 @@
             <img src="salon1.jpg" alt="salon" style="width: 80%;">
             <p class="about"> <br> Naš uspjeh dugujemo konstantnom poboljšavanju 
             vlastitih usluga i ono najvažnije, iznimnom zadovoljstvu naših klijenata.</p>
-            <p class="about"> RADNO VRIJEME </p>
+            <p class="about"> RADNO VRIJEME: <br><br>
+             PON I ČET - 13:00-20:00 <br> UTO , SRI , PET 09:00-16:00 <br> SUB - PO DOGOVORU </p>
           </div>
         </div>
       </div>     
     </div>
     </template>
 <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
       * {
         box-sizing: border-box;
         
@@ -60,6 +62,7 @@
       .about{
         margin:5%;
         padding-top: 5%;
+        font-family: 'Open Sans', sans-serif;
       }
 
       .column left, right img {
