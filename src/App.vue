@@ -18,18 +18,17 @@
         <div class="line3"></div>
       </div>
       <ul v-if="navOpen">
-          <li @click="toggleNav"><router-link to="/">Početna</router-link></li>
-          <li @click="toggleNav"><router-link to="/onama">O nama</router-link></li>
-          <li @click="toggleNav"><router-link to="/cjenik">Cjenik</router-link></li>
-          <li @click="toggleNav"><router-link to="/kontakt">Kontakt</router-link></li>
-          <li @click="toggleNav"><router-link to="/login">Prijava</router-link></li>
+          <li @click="toggleNav"><router-link to="/">POČETNA</router-link></li>
+          <li @click="toggleNav"><router-link to="/onama">O NAMA</router-link></li>
+          <li @click="toggleNav"><router-link to="/cjenik">CJENIK</router-link></li>
+          <li @click="toggleNav"><router-link to="/kontakt">KONTAKT</router-link></li>
+          <li @click="toggleNav"><router-link to="/login">PRIJAVA</router-link></li>
         </ul>
   </nav>
   <router-view/>
   <footer>
     <p style="font-size:18px"> Copyright © Beauty by Ana 2023 </p>
-    <p style="padding-left:925px;
-              font-size:18px"> Za novosti i informacije zapratite nas putem društvenih mreža </p>
+    <p style="font-size:18px"> Za novosti i informacije zapratite nas putem društvenih mreža </p>
     <div class="social-media">
         <a href="https://www.facebook.com/anaminyme.manev" target="_blank">
           <i class="fa fa-facebook-f"></i>
@@ -123,7 +122,7 @@ footer {
   font-size: 30px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .nav-links {
     display: none;
   }
@@ -135,9 +134,8 @@ footer {
   footer {
     flex-direction: column;
     text-align: center;
-    overflow: hidden;
-    font-size: 5px;
   }
+
   .social-media {
     margin-bottom: 20px;
   }

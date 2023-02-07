@@ -106,5 +106,8 @@
         .right {
           width: 100%;
         }
+        .mapouter{
+          margin-top: 7%;
+        }
       }
 </style>

@@ -102,6 +102,7 @@
         padding-top: 5%;
         max-width: 100%;
         margin: 0 auto;
+        padding-bottom: 1%;
         
       }
     
@@ -244,6 +245,10 @@ img:hover {
         }
         .slider{
           margin-top: 55px;
+          margin-bottom: 40px;
+        }
+        .join-button {
+          margin-bottom: 10px;
         }
       }
 
