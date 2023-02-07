@@ -5,11 +5,11 @@
       <img src="logo.png" alt="Logo"> </a>
     </div>
     <ul class="nav-links">
-      <li><router-link to="/">Početna</router-link></li>
-      <li><router-link to="/onama">O nama</router-link></li>
-      <li><router-link to="/cjenik">Cjenik</router-link></li>
-      <li><router-link to="/kontakt">Kontakt</router-link></li>
-      <li><router-link to="/login">Prijava</router-link></li>
+      <li><router-link to="/">POČETNA</router-link></li>
+      <li><router-link to="/onama">O NAMA</router-link></li>
+      <li><router-link to="/cjenik">CJENIK</router-link></li>
+      <li><router-link to="/kontakt">KONTAKT</router-link></li>
+      <li><router-link to="/login">PRIJAVA</router-link></li>
     </ul>
     <div class="burger" @click="toggleNav">
         <div class="line1"></div>
@@ -47,6 +47,7 @@
   color: #000000;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 nav {
   display: flex;
   justify-content: space-between;
@@ -60,6 +61,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .logo img {
@@ -107,6 +109,7 @@ footer {
   padding: 25px;
   background-color: #FFB6C1;
   color: #000000;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .social-media {

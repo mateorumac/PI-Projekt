@@ -228,6 +228,7 @@ img:hover {
   cursor: pointer;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .join-button:hover {

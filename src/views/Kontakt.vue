@@ -59,6 +59,7 @@
         padding-bottom: 56%;
         margin-left: 12%;
         margin-right: 4%;
+        
       }
 
       .gmap_canvas {
@@ -84,7 +85,8 @@
       }
       
       .right{
-        text-align: center;        
+        text-align: center;
+             
       }
       .logo1{
         height: 700px;
