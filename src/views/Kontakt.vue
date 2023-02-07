@@ -4,7 +4,7 @@
           <div class="column left">   
             <div class="mapouter">
                 <div class="gmap_canvas">
-                    <iframe width="600" height="600" 
+                    <iframe width="600" height="650" 
                     id="gmap_canvas" src="https://maps.google.com/maps?q=Beauty%20by%20Ana%20Pula&t=&z=19&ie=UTF8&iwloc=&output=embed" 
                     frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
             
@@ -14,9 +14,9 @@
 
           <div class="column right">
             
-            <img src="logo.png" class="logo1">
+            <img src="bba.png" class="logo1">
             
-            <p class="contact">TRG KRALJA TOMISLAVA 8 PULA</p> <br>
+            <p class="contact">TRG KRALJA TOMISLAVA 8 <br>PULA</p> <br>
             <p class="contact">097 663 43 57</p> <br>
             <p class="contact">AMMANEV@GMAIL.COM</p>
           
@@ -55,7 +55,7 @@
         padding-left: 10%;
         position:relative;
         text-align:right;
-        height: 0;
+        height: 650px;
         padding-bottom: 56%;
         margin-left: 7%;
         margin-right: 7%;
@@ -77,12 +77,19 @@
       }
 
       .contact{
-        padding-left: 10%;
-        text-align: left;
+        
+        
+        text-align: center;
         font-size: 30px;
         font-family: 'Open Sans', sans-serif;
       }
       
+      .logo1{
+        height: 700px;
+        width: 700px;
+        margin-top: -25%;
+        margin-bottom: -27%;
+      }
        
       @media (max-width: 600px) {
         .container {
