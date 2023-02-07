@@ -57,8 +57,8 @@
         text-align:right;
         height: 650px;
         padding-bottom: 56%;
-        margin-left: 7%;
-        margin-right: 7%;
+        margin-left: 12%;
+        margin-right: 4%;
       }
 
       .gmap_canvas {
