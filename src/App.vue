@@ -1,4 +1,5 @@
 <template>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <nav>
     <div class="logo">
       <a href="/">
@@ -26,15 +27,18 @@
   </nav>
   <router-view/>
   <footer>
+    <p style="font-size:18px"> Copyright 2023 Beauty by Ana </p>
+    <p style="padding-left:950px;
+              font-size:18px"> Za novosti i informacije zapratite nas putem društvenih mreža </p>
     <div class="social-media">
-        <a href="#">
-          <i class="fab fa-facebook-f"></i>
+        <a href="https://www.facebook.com/anaminyme.manev" target="_blank">
+          <i class="fa fa-facebook-f"></i>
         </a>
-        <a href="#">
-          <i class="fab fa-instagram"></i>
+        <a href="https://instagram.com/__beauty_by_ana_?igshid=YmMyMTA2M2Y=" target="_blank">
+          <i class="fa fa-instagram"></i>
         </a>
       </div>
-      <p>Copyright 2023 Beauty by Ana</p>
+      
   </footer>
 </template>
 
@@ -48,6 +52,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -112,14 +117,11 @@ footer {
   font-family: 'Open Sans', sans-serif;
 }
 
-.social-media {
-  display: flex;
-}
-
 .social-media a {
-  margin-right: 10px;
-  color: #fff;
-  font-size: 18px;
+  padding-right: 20px;
+  
+  color: #000000;
+  font-size: 30px;
 }
 
 @media (max-width: 768px) {
