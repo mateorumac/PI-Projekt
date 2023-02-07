@@ -93,6 +93,7 @@
     
     </template>
 <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
       * {
         box-sizing: border-box;
         
@@ -116,16 +117,16 @@
       }
       
       h2{
-      margin-top: 8%;
-      margin-bottom: 35px;
-      font-size: 38px;
-      
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 4%;
+        margin-bottom: 35px;
+        font-size: 38px;     
       }
 
       .homepage {
           font-size: 25px;
           margin:5%;
-          
+          font-family: 'Open Sans', sans-serif;
       }
 
       img {
