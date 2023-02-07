@@ -4,7 +4,7 @@
         <div class="row">
           
           <div class="column left">
-            <img src="salon2.jpg" alt="salon" style="width: 80%; margin-left:-5%">
+            <img src="salon2.jpg" alt="salon">
             <p class="about">Naš salon opremljen je po visokim standardima, <br> 
               pružajući klijentima ugodnu i toplu atmosferu. <br>
              Svi naši klijenti dobiju najbolju profesionalnu uslugu, <br> 
@@ -62,11 +62,23 @@
         margin:5%;
         padding-top: 5%;
         font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
       }
 
-      .column left, right img {
-  max-width: 60%;
+      .left img {
+  max-width: 80%;
   height: auto;
+  padding-left: 7%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left:-5%
+}
+
+      .right img {
+  max-width: 80%;
+  height: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
     </style>
 

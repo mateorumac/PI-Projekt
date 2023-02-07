@@ -27,8 +27,8 @@
   </nav>
   <router-view/>
   <footer>
-    <p style="font-size:18px"> Copyright 2023 Beauty by Ana </p>
-    <p style="padding-left:950px;
+    <p style="font-size:18px"> Copyright © Beauty by Ana 2023 </p>
+    <p style="padding-left:925px;
               font-size:18px"> Za novosti i informacije zapratite nas putem društvenih mreža </p>
     <div class="social-media">
         <a href="https://www.facebook.com/anaminyme.manev" target="_blank">
@@ -37,8 +37,7 @@
         <a href="https://instagram.com/__beauty_by_ana_?igshid=YmMyMTA2M2Y=" target="_blank">
           <i class="fa fa-instagram"></i>
         </a>
-      </div>
-      
+      </div>      
   </footer>
 </template>
 
@@ -124,7 +123,7 @@ footer {
   font-size: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .nav-links {
     display: none;
   }
@@ -136,8 +135,9 @@ footer {
   footer {
     flex-direction: column;
     text-align: center;
+    overflow: hidden;
+    font-size: 5px;
   }
-
   .social-media {
     margin-bottom: 20px;
   }

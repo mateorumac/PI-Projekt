@@ -66,7 +66,7 @@
     </ul>
   </div>
 
-  <div class="container3">
+  <div class="container31">
     <h1> Šminkanje </h1>
     <ul class="pricelist">
       <li v-for="(item, index) in items7" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items7.length - 1 }">
@@ -88,6 +88,15 @@ h1{
 .container3 {
   padding-top: 3%;
   padding-bottom: 3%;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.container31 {
+  padding-top: 3%;
+  padding-bottom: 5%;
   width: 50%;
   margin: 0 auto;
   text-align: center;

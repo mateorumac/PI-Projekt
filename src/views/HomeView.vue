@@ -242,6 +242,9 @@ img:hover {
         .right {
           width: 100%;
         }
+        .slider{
+          margin-top: 55px;
+        }
       }
 
     </style>

@@ -1,4 +1,5 @@
 <template>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <div class="container4">
         <div class="row">
           <div class="column left">   
@@ -15,9 +16,11 @@
           <div class="column right">
             
             <img src="bba.png" class="logo1">
-            
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
             <p class="contact">TRG KRALJA TOMISLAVA 8 <br>PULA<br><br><br>
+            <i class="fa-sharp fa-solid fa-phone"></i>
             097 663 43 57 <br><br><br>
+            <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
             AMMANEV@GMAIL.COM</p><br><br>
           
           </div>
