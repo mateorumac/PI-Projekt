@@ -13,7 +13,12 @@
           </div>
 
           <div class="column right">
-            <img src="logo.png">
+            
+            <img src="logo.png" class="logo1">
+            
+            <p class="contact">TRG KRALJA TOMISLAVA 8 PULA</p> <br>
+            <p class="contact">097 663 43 57</p> <br>
+            <p class="contact">AMMANEV@GMAIL.COM</p>
           
           </div>
         </div>
@@ -21,8 +26,9 @@
 </template>
 
 <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-* {
+    * {
         box-sizing: border-box;
         
       }
@@ -56,22 +62,35 @@
       }
 
       .gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 100%;
-  width: 100%;
-}
+        overflow: hidden;
+        background: none !important;
+        height: 100%;
+        width: 100%;
+      }
 
-.gmap_canvas iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-}
+      .gmap_canvas iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .contact{
+        padding-left: 10%;
+        text-align: left;
+        font-size: 30px;
+        font-family: 'Open Sans', sans-serif;
+      }
+      
+       
+      @media (max-width: 600px) {
+        .container {
+          flex-direction: column;
+        }
+        .left,
+        .right {
+          width: 100%;
+        }
+      }
 </style>
