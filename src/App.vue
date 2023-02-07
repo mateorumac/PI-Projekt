@@ -12,12 +12,12 @@
       <li><router-link to="/kontakt">KONTAKT</router-link></li>
       <li><router-link to="/login">PRIJAVA</router-link></li>
     </ul>
-    <div class="burger" @click="toggleNav">
+      <div class="burger" @click="toggleNav">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
-      <ul v-if="navOpen">
+        <ul v-if="navOpen">
           <li @click="toggleNav"><router-link to="/">POČETNA</router-link></li>
           <li @click="toggleNav"><router-link to="/onama">O NAMA</router-link></li>
           <li @click="toggleNav"><router-link to="/cjenik">CJENIK</router-link></li>
@@ -57,7 +57,7 @@ nav {
   align-items: center;
   padding: 25px;
   background-color: #FFB6C1;
-    }
+}
 
 nav ul {
   display: flex;
@@ -88,9 +88,9 @@ nav ul {
   font-weight: bold;
   color: #000000;
 
-    &.router-link-exact-active {
+  &.router-link-exact-active {
       color: white;
-    }
+  }
 }
 
 .burger {
@@ -162,7 +162,6 @@ footer {
     
   }
 }
-
 </style>
 
 <script>
