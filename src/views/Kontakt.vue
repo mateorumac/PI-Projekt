@@ -16,9 +16,9 @@
             
             <img src="bba.png" class="logo1">
             
-            <p class="contact">TRG KRALJA TOMISLAVA 8 <br>PULA</p> <br>
-            <p class="contact">097 663 43 57</p> <br>
-            <p class="contact">AMMANEV@GMAIL.COM</p>
+            <p class="contact">TRG KRALJA TOMISLAVA 8 <br>PULA<br><br><br>
+            097 663 43 57 <br><br><br>
+            AMMANEV@GMAIL.COM</p><br><br>
           
           </div>
         </div>
@@ -77,13 +77,15 @@
       }
 
       .contact{
-        
-        
-        text-align: center;
+        display: inline-block;        
+        text-align: left;
         font-size: 30px;
         font-family: 'Open Sans', sans-serif;
       }
       
+      .right{
+        text-align: center;        
+      }
       .logo1{
         height: 700px;
         width: 700px;
