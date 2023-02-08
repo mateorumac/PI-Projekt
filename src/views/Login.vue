@@ -70,6 +70,27 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #ff99a8;
 }
+
+@media (max-width: 600px) {
+  .container5 {
+    max-width: 90%;
+    padding: 30px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  label {
+    font-size: 16px;
+  }
+  input {
+    font-size: 14px;
+  }
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
+
 </style>
 
 <script>

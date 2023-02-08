@@ -26,7 +26,7 @@
         </ul>
   </nav>
   <router-view/>
-  <footer>
+  <footer v-if="$route.path !== '/login'">
     <p style="font-size:18px"> Copyright © Beauty by Ana 2023 </p>
     <div style="display: flex; align-items: center;">
     <p style="font-size:18px; margin-right: 20px;"> Za novosti i informacije zapratite nas putem društvenih mreža </p>
@@ -145,8 +145,6 @@ footer {
     padding-top: 10px;
     
   }
-
-
   nav ul {
     flex-direction: column;
     position: absolute;
@@ -178,6 +176,7 @@ export default {
       navOpen: false
     };
   },
+
   methods: {
     toggleNav() {
       this.navOpen = !this.navOpen;
