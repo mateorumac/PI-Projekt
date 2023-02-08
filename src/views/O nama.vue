@@ -2,24 +2,28 @@
       <div class="container2">
         <div class="row">         
           <div class="column left">
-            <img src="salon2.jpg" alt="salon">
+            <img src="rad.jpg" alt="nokti">
             <p class="about"><i>Naš salon opremljen je po visokim standardima, <br> 
               pružajući klijentima ugodnu i toplu atmosferu. <br>
              Svi naši klijenti dobiju najbolju profesionalnu uslugu, <br> 
-            za što se brine naš stručni i talentirani tim. </i></p> 
-            <img src="salon3.jpg" alt="salon" style="width: 80%;">    
-          </div>
-            <div class="column right">
-              <p class="about"><i>Salon ljepote Ana nalazi se u Puli. <br>
-                Našim klijentima nudimo usluge njege lica, <br> masaže, 
-                depilacije, njege ruku i stopala, <br> oblikovanja tijela, šminkanja i brow lifting.</i></p>
-              <img src="salon1.jpg" alt="salon" style="width: 80%;">
-              <p class="about"> <br><i> Naš uspjeh dugujemo konstantnom <br> poboljšavanju 
-              vlastitih usluga i ono najvažnije, <br> iznimnom zadovoljstvu naših klijenata.</i></p> <br>
-              <div class="rectangle">
+            za što se brine naš stručni i talentirani tim. </i></p> <br><br> 
+            <img src="salon1.png" alt="salon" style="width: 80%;">
+            <div class="rectangle">
                 <p class="about"><br><b> RADNO VRIJEME: </b><br><br>
                 PON I ČET - 13:00-20:00 <br><br> UTO , SRI , PET - 09:00-16:00 <br><br> SUB - PO DOGOVORU </p>
               </div>
+                
+          </div>
+            <div class="column right"> <br><br>
+              <p class="about"><i>Salon ljepote Ana nalazi se u Puli. <br>
+                Našim klijentima nudimo usluge njege lica, <br> masaže, 
+                depilacije, njege ruku i stopala, <br> oblikovanja tijela, šminkanja i brow lifting.<br>
+                Uz ove usluge također imamo i odjel <br> prodaje  preparativne i dekorativne kozmetike.</i></p> <br>
+              <img src="kozmetika.jpg" alt="kozmetika" style="width: 80%;">
+              <p class="about"> <br><i> Naš uspjeh dugujemo konstantnom <br> poboljšavanju 
+              vlastitih usluga i ono najvažnije, <br> iznimnom zadovoljstvu naših klijenata.</i></p> <br><br><br><br>
+              <img src="salon2.png" alt="salon" style="width: 80%;">
+              
             </div>
         </div>
       </div>     
@@ -37,13 +41,14 @@
       }
 
       .rectangle {
-        margin-top: 7%;
+        margin-top: 4%;
+        margin-bottom: 9%;
         margin-left: 25% ;
         width: 450px;
         height: 370px;
         background-color: #FFB6C1;
         border-radius: 10px;
-        
+        box-shadow: 0px 0px 10px 2px #DCDCDC;
       }
       .row::after {
         content: "";
@@ -69,7 +74,7 @@
         padding-left: 7%;
         padding-top: 5%;
         padding-bottom: 5%;
-        margin-left:-5%
+        margin-left:-5%;
       }
 
       .right img {
@@ -99,6 +104,3 @@
         }       
       }  
 </style>
-
-
-
