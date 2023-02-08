@@ -14,11 +14,12 @@
           </div>
           <div class="column right">           
             <img src="bba.png" class="logo1">
-            <i class="fa-sharp fa-solid fa-location-dot"></i>
-            <p class="contact">TRG KRALJA TOMISLAVA 8 <br>PULA<br><br><br>
-            <i class="fa-sharp fa-solid fa-phone"></i>
+            
+            <p class="contact"><i class="fa fa-map-marker"></i>&nbsp;
+              TRG KRALJA TOMISLAVA 8 <br> &nbsp; &nbsp;&nbsp;PULA<br><br><br>
+            <i class="fa fa-phone"></i>&nbsp;
             097 663 43 57 <br><br><br>
-            <i class="fa-sharp fa-solid fa-envelopes-bulk"></i>
+            <i class="fa fa-envelope"></i>&nbsp;
             AMMANEV@GMAIL.COM</p><br><br>         
           </div>
         </div>
