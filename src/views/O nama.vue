@@ -1,29 +1,27 @@
 <template>  
       <div class="container2">
         <div class="row">         
-          <div class="column left">
+          <div class="column left"> <br><br>
+            <p class="about"><i>Salon ljepote Ana nalazi se u Puli. <br>
+                Našim klijentima nudimo usluge njege lica, <br> masaže, 
+                depilacije, njege ruku i stopala, <br> oblikovanja tijela, šminkanja i brow lifting.<br>
+                Uz ove usluge također imamo i odjel  prodaje <br> preparativne i dekorativne kozmetike.</i></p>
             <img src="rad.jpg" alt="nokti">
-            <p class="about"><i>Naš salon opremljen je po visokim standardima, <br> 
+             <p class="about"><i> Naš uspjeh dugujemo konstantnom <br> poboljšavanju 
+              vlastitih usluga i ono najvažnije, <br> iznimnom zadovoljstvu naših klijenata.</i></p> <br>
+            <img src="salon1.png" alt="salon" style="width: 80%;">
+          </div>
+            <div class="column right"> <br>
+              <img src="kozmetika.jpg" alt="kozmetika" style="width: 80%;">
+              <p class="about"><i>Naš salon opremljen je po visokim standardima, <br> 
               pružajući klijentima ugodnu i toplu atmosferu. <br>
              Svi naši klijenti dobiju najbolju profesionalnu uslugu, <br> 
-            za što se brine naš stručni i talentirani tim. </i></p> <br><br> 
-            <img src="salon1.png" alt="salon" style="width: 80%;">
-            <div class="rectangle">
+            za što se brine naš stručni i talentirani tim. </i></p> <br>             
+              <img src="salon2.png" alt="salon" style="width: 80%;">
+              <div class="rectangle">
                 <p class="about"><br><b> RADNO VRIJEME: </b><br><br>
                 PON I ČET - 13:00-20:00 <br><br> UTO , SRI , PET - 09:00-16:00 <br><br> SUB - PO DOGOVORU </p>
               </div>
-                
-          </div>
-            <div class="column right"> <br><br>
-              <p class="about"><i>Salon ljepote Ana nalazi se u Puli. <br>
-                Našim klijentima nudimo usluge njege lica, <br> masaže, 
-                depilacije, njege ruku i stopala, <br> oblikovanja tijela, šminkanja i brow lifting.<br>
-                Uz ove usluge također imamo i odjel <br> prodaje  preparativne i dekorativne kozmetike.</i></p> <br>
-              <img src="kozmetika.jpg" alt="kozmetika" style="width: 80%;">
-              <p class="about"> <br><i> Naš uspjeh dugujemo konstantnom <br> poboljšavanju 
-              vlastitih usluga i ono najvažnije, <br> iznimnom zadovoljstvu naših klijenata.</i></p> <br><br><br><br>
-              <img src="salon2.png" alt="salon" style="width: 80%;">
-              
             </div>
         </div>
       </div>     
@@ -42,7 +40,7 @@
 
       .rectangle {
         margin-top: 4%;
-        margin-bottom: 9%;
+        margin-bottom: 7%;
         margin-left: 25% ;
         width: 450px;
         height: 370px;
@@ -63,7 +61,7 @@
 
       .about{
         margin:5%;
-        padding-top: 5%;
+        padding: 5%;
         font-family: 'Open Sans', sans-serif;
         font-size: 25px;
       }
