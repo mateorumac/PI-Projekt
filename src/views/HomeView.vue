@@ -81,11 +81,11 @@
                kao najvećem <br> organu  našeg tijela,  dati ono što joj je potrebno <br> 
               kako bi postala i  ostala zdrava i lijepa,  a <br> vaše tijelo zadržalo  
               vitalnost i njegovan izgled. <br><br><br>
-            Izgled nam je svima važan i prvi <br> dojmovi   se brzo pamte i dugo traju. 
-            <br> Ako ste pod stresom, umorni ili jednostavno <br>
-             želite  uživati i  opustiti se dođite u naš salon.
-            <br> Uz stručni rad s vrhunskom kozmetikom 
-             <br>brinemo o vašoj ljepoti i zdravlju.</i></p>
+            Izgled nam je svima važan i prvi  dojmovi se <br>brzo pamte i dugo traju. 
+             Ako ste pod stresom, <br> umorni ili jednostavno 
+             želite  uživati i  opustiti <br> se dođite u naš salon.
+             Uz stručni rad s vrhunskom <br>kozmetikom 
+             brinemo o vašoj ljepoti i zdravlju.</i></p>
              <button class="join-button" @click="redirectToPage"><b>Rezerviraj termin</b></button>
           </div>
         </div>
@@ -119,7 +119,7 @@
       
       h2{
         font-family: 'Open Sans', sans-serif;
-        margin-top: 4%;
+        margin-top: 5%;
         margin-bottom: 35px;
         font-size: 38px;     
       }
