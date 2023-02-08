@@ -103,9 +103,17 @@
         .left,
         .right {
           width: 100%;
-        }
-        .mapouter{
+        }       
+        .mapouter {
+          padding-left: 0;
+          text-align: center;
+          margin-left: 0;
+          margin-right: 0;
           margin-top: 7%;
+        }
+        .logo1 {
+          max-width: 100%;
+          height: auto;
         }
       }
 </style>

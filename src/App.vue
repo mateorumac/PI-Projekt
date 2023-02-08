@@ -29,7 +29,7 @@
   <footer>
     <p style="font-size:18px"> Copyright © Beauty by Ana 2023 </p>
     <div style="display: flex; align-items: center;">
-    <p style="font-size:18px; margin-right: 10px;"> Za novosti i informacije zapratite nas putem društvenih mreža </p>
+    <p style="font-size:18px; margin-right: 20px;"> Za novosti i informacije zapratite nas putem društvenih mreža </p>
     <div class="social-media">
         <a href="https://www.facebook.com/anaminyme.manev" target="_blank">
           <i class="fa fa-facebook-f"></i>
@@ -135,6 +135,7 @@ footer {
 
   footer .social-media + p {
       text-align: center;
+      
     }
 
   footer .social-media {
@@ -142,6 +143,7 @@ footer {
     flex-direction: column;
     text-align: center;
     padding-top: 10px;
+    
   }
 
 
