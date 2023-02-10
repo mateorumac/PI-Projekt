@@ -85,7 +85,7 @@ button[type="button"]:hover {
   input {
     font-size: 14px;
   }
-  button[type="submit"] {
+  button[type="button"] {
     font-size: 18px;
     padding: 10px 15px;
   }
@@ -109,9 +109,9 @@ export default {
     async handleLogin() {
       try {
         const response = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        console.log(response)
+        console.log("Uspješna prijava",response)
       } catch (error) {
-        console.error(error)
+        console.error("Došlo je do greške", error)
       }
     }
   }

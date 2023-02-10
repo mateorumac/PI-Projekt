@@ -119,7 +119,7 @@
       
       h2{
         font-family: 'Open Sans', sans-serif;
-        margin-top: 5%;
+        margin-top: 7%;
         margin-bottom: 35px;
         font-size: 38px;     
       }
