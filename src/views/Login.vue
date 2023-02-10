@@ -17,6 +17,7 @@
 </template>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 .container5 {
   display: flex;
@@ -90,7 +91,6 @@ button[type="button"]:hover {
     padding: 10px 15px;
   }
 }
-
 </style>
 
 <script>
@@ -107,9 +107,11 @@ export default {
   },
   methods: {
     async handleLogin() {
+      let that=this;
       try {
         const response = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        console.log("Uspješna prijava",response)
+        console.log("Uspješna prijava",response);
+        that.$router.replace({ name: 'home'});
       } catch (error) {
         console.error("Došlo je do greške", error)
       }
