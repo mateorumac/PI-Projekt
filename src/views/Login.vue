@@ -2,16 +2,16 @@
 
   <div class="container5">
     <h2 class="title">Prijava</h2>
-    <form @submit.prevent="submitForm">
+    <form @submit.prevent="handleLogin">
       <div class="form-group">
-        <label for="username">Korisničko ime</label>
-        <input type="text" id="username" v-model="form.username" />
+        <label for="email">E-mail</label>
+        <input type="email" v-model="email" required />
       </div>
       <div class="form-group">
         <label for="password">Lozinka</label>
-        <input type="password" id="password" v-model="form.password" />
+        <input type="password" v-model="password" required/>
       </div>
-      <button type="submit">Prijavi se</button>
+      <button type="button" @click="handleLogin">Prijavi se</button>
     </form>
   </div>
 </template>
@@ -56,7 +56,7 @@ input {
   border-radius: 5px;
   border: 1px solid #ddd;
 }
-button[type="submit"] {
+button[type="button"] {
   font-family: 'Open Sans', sans-serif;
   background-color: #FFB6C1;
   color: white;
@@ -67,7 +67,7 @@ button[type="submit"] {
   cursor: pointer;
   margin-top: 30px;
 }
-button[type="submit"]:hover {
+button[type="button"]:hover {
   background-color: #ff99a8;
 }
 
@@ -94,20 +94,26 @@ button[type="submit"]:hover {
 </style>
 
 <script>
+import firebase from '@/firebase';
+import 'firebase/auth'
+
 export default {
+  name: "Login",
   data() {
     return {
-      form: {
-        username: "",
-        password: "",
-      },
+        email: "",
+        password: "",    
     };
   },
   methods: {
-    submitForm() {
-      console.log('Username:', this.form.username);
-      console.log('Password:', this.form.password);
-    },
-  },
+    async handleLogin() {
+      try {
+        const response = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+        console.log(response)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
 };
 </script>
