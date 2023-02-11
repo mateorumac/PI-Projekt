@@ -6,9 +6,12 @@
       <li v-for="(item, index) in items" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
-      </li>
-      
+      </li>     
     </ul>
+    <div v-if="isUserLoggedIn">
+      <button class="discount" @click="discount">Primjeni popust 10%</button>              
+      <button v-if="isUserLoggedIn" class="discount2" @click="discount2">Primjeni popust 20%</button>           
+    </div>
   </div>
 
   <div class="container3">
@@ -17,9 +20,12 @@
       <li v-for="(item, index) in items2" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items2.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
-      </li>
-      
+      </li>      
     </ul>
+    <div v-if="isUserLoggedIn">
+      <button class="discount" @click="discount">Primjeni popust 10%</button>              
+      <button v-if="isUserLoggedIn" class="discount2" @click="discount2">Primjeni popust 20%</button>           
+    </div>
   </div>
 
   <div class="container3">
@@ -28,9 +34,12 @@
       <li v-for="(item, index) in items3" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items3.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
-      </li>
-      
+      </li>     
     </ul>
+    <div v-if="isUserLoggedIn">
+      <button class="discount" @click="discount">Primjeni popust 10%</button>              
+      <button v-if="isUserLoggedIn" class="discount2" @click="discount2">Primjeni popust 20%</button>           
+    </div>
   </div>
 
   <div class="container3">
@@ -39,9 +48,12 @@
       <li v-for="(item, index) in items4" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items4.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
-      </li>
-      
+      </li>     
     </ul>
+    <div v-if="isUserLoggedIn">
+      <button class="discount" @click="discount">Primjeni popust 10%</button>              
+      <button v-if="isUserLoggedIn" class="discount2" @click="discount2">Primjeni popust 20%</button>           
+    </div>
   </div>
 
   <div class="container3">
@@ -50,9 +62,12 @@
       <li v-for="(item, index) in items5" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items5.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
-      </li>
-      
+      </li>      
     </ul>
+    <div v-if="isUserLoggedIn">
+      <button class="discount" @click="discount">Primjeni popust 10%</button>              
+      <button v-if="isUserLoggedIn" class="discount2" @click="discount2">Primjeni popust 20%</button>           
+    </div>
   </div>
 
   <div class="container3">
@@ -61,9 +76,12 @@
       <li v-for="(item, index) in items6" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items6.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
-      </li>
-      
+      </li>     
     </ul>
+    <div v-if="isUserLoggedIn">
+      <button class="discount" @click="discount">Primjeni popust 10%</button>              
+      <button v-if="isUserLoggedIn" class="discount2" @click="discount2">Primjeni popust 20%</button>           
+    </div>
   </div>
 
   <div class="container31">
@@ -72,10 +90,13 @@
       <li v-for="(item, index) in items7" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items7.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
-      </li>
-      
+      </li>     
     </ul>
-  </div>
+    <div v-if="isUserLoggedIn">
+      <button class="discount" @click="discount">Primjeni popust 10%</button>              
+      <button v-if="isUserLoggedIn" class="discount2" @click="discount2">Primjeni popust 20%</button>           
+    </div>
+  </div>  
 </template>
     
 <style>
@@ -130,6 +151,31 @@ span {
   font-size: 18px;
 }
 
+.discount{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #008000;
+  color: white;
+  padding: 15px 23px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.discount2{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #008000;
+  color: white;
+  padding: 15px 23px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left:20%;
+}
+
 @media (max-width: 600px) {
   li.item {
     flex-direction: column;
@@ -138,15 +184,28 @@ span {
   .item-price {
     margin-top: 10px;
   }
+  .discount {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  .discount2 {
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-left:-1%;
+  }
 }
 
 
     </style>
 
 <script>
+import firebase from '@/firebase';
+
 export default {
+
   data() {
     return {
+      isUserLoggedIn: false,
       items: [
         { name: 'Njega lica', price: '27€ / 203,43kn' },
         { name: 'Anti-age njega lica', price: '34€ / 256,17kn'},
@@ -205,6 +264,15 @@ export default {
 
 };
 },
+mounted() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.isUserLoggedIn = true;
+      } else {
+        this.isUserLoggedIn = false;
+      }
+    });
+  },
 };
 </script>
 
