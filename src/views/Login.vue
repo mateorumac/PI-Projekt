@@ -1,5 +1,4 @@
 <template>
-
   <div class="container5">
     <h2 class="title">Prijava</h2>
     <form @submit.prevent="handleLogin">
@@ -17,7 +16,6 @@
 </template>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 .container5 {
   display: flex;

@@ -11,10 +11,11 @@
       <li><router-link to="/cjenik">CJENIK</router-link></li>
       <li><router-link to="/kontakt">KONTAKT</router-link></li>
       <li v-if="!isUserLoggedIn"><router-link to="/login">PRIJAVA</router-link></li>
+      <li v-if="isUserLoggedIn">
+      <button class="logout" @click="logout">ODJAVA</button>  
+      </li>
     </ul>
-    <div v-if="isUserLoggedIn">
-      <button @click="logout">Logout</button>  
-  </div>
+    
       <div class="burger" @click="toggleNav">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -26,6 +27,9 @@
           <li @click="toggleNav"><router-link to="/cjenik">CJENIK</router-link></li>
           <li @click="toggleNav"><router-link to="/kontakt">KONTAKT</router-link></li>
           <li v-if="!isUserLoggedIn" @click="toggleNav"><router-link to="/login">PRIJAVA</router-link></li>
+          <li v-if="isUserLoggedIn">
+            <button class="logout" @click="logout">ODJAVA</button>  
+          </li>
         </ul>
   </nav>
   <router-view/>
@@ -70,6 +74,18 @@ nav ul {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+}
+
+.logout {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FFF5EE;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 19px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .logo img {
