@@ -10,8 +10,11 @@
       <li><router-link to="/onama">O NAMA</router-link></li>
       <li><router-link to="/cjenik">CJENIK</router-link></li>
       <li><router-link to="/kontakt">KONTAKT</router-link></li>
-      <li><router-link to="/login">PRIJAVA</router-link></li>
+      <li v-if="!isUserLoggedIn"><router-link to="/login">PRIJAVA</router-link></li>
     </ul>
+    <div v-if="isUserLoggedIn">
+      <button @click="logout">Logout</button>  
+  </div>
       <div class="burger" @click="toggleNav">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -22,7 +25,7 @@
           <li @click="toggleNav"><router-link to="/onama">O NAMA</router-link></li>
           <li @click="toggleNav"><router-link to="/cjenik">CJENIK</router-link></li>
           <li @click="toggleNav"><router-link to="/kontakt">KONTAKT</router-link></li>
-          <li @click="toggleNav"><router-link to="/login">PRIJAVA</router-link></li>
+          <li v-if="!isUserLoggedIn" @click="toggleNav"><router-link to="/login">PRIJAVA</router-link></li>
         </ul>
   </nav>
   <router-view/>
@@ -170,14 +173,29 @@ footer {
 </style>
 
 <script>
+import firebase from '@/firebase';
 export default {
   data() {
     return {
+      isUserLoggedIn: false,
       navOpen: false
     };
   },
 
+  mounted() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.isUserLoggedIn = true;
+      } else {
+        this.isUserLoggedIn = false;
+      }
+    });
+  },
+
   methods: {
+    logout() {
+      firebase.auth().signOut();
+    },
     toggleNav() {
       this.navOpen = !this.navOpen;
     }
