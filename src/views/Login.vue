@@ -112,6 +112,7 @@ export default {
         that.$router.replace({ name: 'home'});
       } catch (error) {
         console.error("Došlo je do greške", error)
+        alert("Unijeli ste pogrešnu E-mail adresu ili lozinku, molimo pokušajte ponovno");
       }
     }
   }
