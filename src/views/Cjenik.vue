@@ -1,6 +1,11 @@
 <template>
 
   <div class="container3">
+    <div class="buttons-container" v-if="isUserLoggedIn">
+      <button class="discount" @click="discount1">Primjeni 10% popusta na sve </button>
+      <button class="remove" @click="removeDiscount">Ukloni popust</button>              
+      <button class="discount" @click="discount2" style="margin-left:6%;">Primjeni 20% popusta na sve</button>           
+    </div>
     <h1>Lice</h1>
     <ul class="pricelist">
       <li v-for="(item, index) in items" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items.length - 1 }">
@@ -8,11 +13,7 @@
         <span class="item-price">{{ item.price }}</span>
       </li>     
     </ul>
-    <div v-if="isUserLoggedIn">
-      <button class="discount" @click="discount1">Primjeni 10% popusta na sve </button>              
-      <button class="discount2" @click="discount2">Primjeni 20% popusta na sve</button>           
-      <button class="remove" @click="removeDiscount">Ukloni popust</button>
-    </div>
+       
   </div>
 
   <div class="container3">
@@ -85,7 +86,7 @@ h1{
 }
 .container3 {
   padding-top: 3%;
-  padding-bottom: 3%;
+  padding-bottom: 0%;
   width: 50%;
   margin: 0 auto;
   text-align: center;
@@ -128,6 +129,10 @@ span {
   font-size: 18px;
 }
 
+.buttons-container{
+  margin-top: 1%;
+  padding-bottom: 3%;
+}
 .discount{
   font-family: 'Open Sans', sans-serif;
   background-color: #008000;
@@ -137,20 +142,6 @@ span {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  margin-top: 30px;
-}
-
-.discount2{
-  font-family: 'Open Sans', sans-serif;
-  background-color: #008000;
-  color: white;
-  padding: 15px 23px;
-  font-size: 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  margin-top: 30px;
-  margin-left:20%;
 }
 
 .remove{
@@ -162,7 +153,7 @@ span {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  margin-top: 30px;
+  margin-left:6%;
 }
 
 @media (max-width: 600px) {
@@ -187,6 +178,11 @@ span {
     padding: 10px 15px;
     margin-left:-1%;
   }
+  .buttons-container{
+  margin-top: 1%;
+  padding: 2%;
+  padding-bottom: 3%;
+}
 }
 
 </style>
@@ -269,154 +265,55 @@ mounted() {
   },
 methods: {
     discount1() {
-      if (!this.appliedDiscount) {
-      this.items.forEach(item => {
+  if (!this.appliedDiscount) {
+    let itemsArray = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6, this.items7];
+
+    itemsArray.forEach(items => {
+      items.forEach(item => {
         let [price, currency] = item.price.split(" ");
         price = Number(price.slice(0, -1));
         price = (price * 0.9).toFixed(2);
         item.price = `${price}€`;
       });
-      this.appliedDiscount = true;
-      localStorage.setItem("items", JSON.stringify(this.items));
-      this.items2.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.9).toFixed(2);
-        item.price = `${price}€`;
-      });
-      localStorage.setItem("items2", JSON.stringify(this.items2));
-      this.items3.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.9).toFixed(2);
-        item.price = `${price}€`;
-      });
-      localStorage.setItem("items3", JSON.stringify(this.items3));
-      this.items4.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.9).toFixed(2);
-        item.price = `${price}€`;
-      });
-      localStorage.setItem("items4", JSON.stringify(this.items4));
-      this.items5.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.9).toFixed(2);
-        item.price = `${price}€`;
-      });
-      localStorage.setItem("items5", JSON.stringify(this.items5));
-      this.items6.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.9).toFixed(2);
-        item.price = `${price}€`;
-      });
-      localStorage.setItem("items6", JSON.stringify(this.items6));
-      this.items7.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.9).toFixed(2);
-        item.price = `${price}€`;
-      });
-      localStorage.setItem("items7", JSON.stringify(this.items7));
-      }
-    },
+      localStorage.setItem(`items${itemsArray.indexOf(items) + 1}`, JSON.stringify(items));
+    });
+
+    this.appliedDiscount = true;
+    localStorage.setItem("appliedDiscount", JSON.stringify(this.appliedDiscount));
+  }
+},
     discount2() {
-      if (!this.appliedDiscount) {
-      this.items.forEach(item => {
+  if (!this.appliedDiscount) {
+    let itemsArray = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6, this.items7];
+
+    itemsArray.forEach(items => {
+      items.forEach(item => {
         let [price, currency] = item.price.split(" ");
         price = Number(price.slice(0, -1));
         price = (price * 0.8).toFixed(2);
         item.price = `${price}€`;
       });
-      this.appliedDiscount = true;
-      this.items2.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.8).toFixed(2);
-        item.price = `${price}€`;
-      });
-      this.items3.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.8).toFixed(2);
-        item.price = `${price}€`;
-      });
-      this.items4.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.8).toFixed(2);
-        item.price = `${price}€`;
-      });
-      this.items5.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.8).toFixed(2);
-        item.price = `${price}€`;
-      });
-      this.items6.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.8).toFixed(2);
-        item.price = `${price}€`;
-      });
-      this.items7.forEach(item => {
-        let [price, currency] = item.price.split(" ");
-        price = Number(price.slice(0, -1));
-        price = (price * 0.8).toFixed(2);
-        item.price = `${price}€`;
-      });
-      }
-    },
+      localStorage.setItem(`items${itemsArray.indexOf(items) + 1}`, JSON.stringify(items));
+    });
+
+    this.appliedDiscount = true;
+  }
+},
     removeDiscount() {
-    if (this.appliedDiscount) {
-      this.items.forEach(item => {
-        item.price = item.originalPrice+'€';
+  if (this.appliedDiscount) {
+    const items = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6, this.items7];
+    items.forEach(itemList => {
+      itemList.forEach(item => {
+        item.price = item.originalPrice + '€';
       });
-        this.appliedDiscount = false;
-      localStorage.setItem("items", JSON.stringify(this.items));  
-      this.items2.forEach(item => {
-        item.price = item.originalPrice+'€';
-      });
-        this.appliedDiscount = false;
-        localStorage.setItem("items2", JSON.stringify(this.items2));
-      this.items3.forEach(item => {
-        item.price = item.originalPrice+'€';
-      });
-      this.appliedDiscount = false;
-      localStorage.setItem("items3", JSON.stringify(this.items3));
-      this.items4.forEach(item => {
-        item.price = item.originalPrice+'€';
-      });
-      this.appliedDiscount = false;
-      localStorage.setItem("items4", JSON.stringify(this.items4));
-      this.items5.forEach(item => {
-        item.price = item.originalPrice+'€';
-      });
-      this.appliedDiscount = false;
-      
-    localStorage.setItem("items5", JSON.stringify(this.items5));
-      this.items6.forEach(item => {
-        item.price = item.originalPrice+'€';
-      });
-      this.appliedDiscount = false;
-      
-    localStorage.setItem("items6", JSON.stringify(this.items6));
-      this.items7.forEach(item => {
-        item.price = item.originalPrice+'€';
-      });
-      this.appliedDiscount = false;
-     localStorage.setItem("items7", JSON.stringify(this.items7));           
-  }  
+      localStorage.setItem(`items${itemList === this.items ? '' : itemList.indexOf(itemList) + 2}`, JSON.stringify(itemList));
+    });
+    this.appliedDiscount = false;
+  }
 },
 created() {
-  this.items = localStorage.getItem("items")
-    ? JSON.parse(localStorage.getItem("items"))
-    : this.items;
-  this.appliedDiscount = localStorage.getItem("appliedDiscount")
-    ? JSON.parse(localStorage.getItem("appliedDiscount"))
-    : false;
+  this.items = JSON.parse(localStorage.getItem("items")) || this.items;
+  this.appliedDiscount = JSON.parse(localStorage.getItem("appliedDiscount")) || false;
 }
 },
 };
