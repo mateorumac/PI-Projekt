@@ -11,7 +11,14 @@
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>     
-    </ul>      
+    </ul>
+    <div class="new-item" v-if="isUserLoggedIn">
+      <label for="item-name">STAVKA:</label>
+      <input id="item-name" v-model="newItemName" type="text" />
+      <label for="item-price">CIJENA:</label>
+      <input id="item-price" v-model="newItemPrice" type="text" />
+      <button @click="addItem('items', newItemName, newItemPrice)">DODAJ</button>
+    </div>        
   </div>
 
   <div class="container3">
@@ -22,6 +29,13 @@
         <span class="item-price">{{ item.price }}</span>
       </li>      
     </ul>
+    <div class="new-item" v-if="isUserLoggedIn">
+      <label for="item-name">STAVKA:</label>
+      <input id="item-name" v-model="newItemName" type="text" />
+      <label for="item-price">CIJENA:</label>
+      <input id="item-price" v-model="newItemPrice" type="text" />
+      <button @click="addItem('items2', newItemName, newItemPrice)">DODAJ</button>
+    </div>
   </div>
 
   <div class="container3">
@@ -32,6 +46,13 @@
         <span class="item-price">{{ item.price }}</span>
       </li>     
     </ul>
+    <div class="new-item" v-if="isUserLoggedIn">
+      <label for="item-name">STAVKA:</label>
+      <input id="item-name" v-model="newItemName" type="text" />
+      <label for="item-price">CIJENA:</label>
+      <input id="item-price" v-model="newItemPrice" type="text" />
+      <button @click="addItem('items3', newItemName, newItemPrice)">DODAJ</button>
+    </div>
   </div>
 
   <div class="container3">
@@ -42,6 +63,13 @@
         <span class="item-price">{{ item.price }}</span>
       </li>     
     </ul>
+    <div class="new-item" v-if="isUserLoggedIn">
+      <label for="item-name">STAVKA:</label>
+      <input id="item-name" v-model="newItemName" type="text" />
+      <label for="item-price">CIJENA:</label>
+      <input id="item-price" v-model="newItemPrice" type="text" />
+      <button @click="addItem('items4', newItemName, newItemPrice)">DODAJ</button>
+    </div>
   </div>
 
   <div class="container3">
@@ -52,6 +80,13 @@
         <span class="item-price">{{ item.price }}</span>
       </li>      
     </ul>
+    <div class="new-item" v-if="isUserLoggedIn">
+      <label for="item-name">STAVKA:</label>
+      <input id="item-name" v-model="newItemName" type="text" />
+      <label for="item-price">CIJENA:</label>
+      <input id="item-price" v-model="newItemPrice" type="text" />
+      <button @click="addItem('items5', newItemName, newItemPrice)">DODAJ</button>
+    </div>
   </div>
 
   <div class="container31">
@@ -62,6 +97,13 @@
         <span class="item-price">{{ item.price }}</span>
       </li>     
     </ul>
+    <div class="new-item" v-if="isUserLoggedIn">
+      <label for="item-name">STAVKA:</label>
+      <input id="item-name" v-model="newItemName" type="text" />
+      <label for="item-price">CIJENA:</label>
+      <input id="item-price" v-model="newItemPrice" type="text" />
+      <button @click="addItem('items6', newItemName, newItemPrice)">DODAJ</button>
+    </div>
   </div>
 </template>
     
@@ -72,6 +114,46 @@
 h1{
   font-family: 'Great Vibes', cursive;
   font-size: 45px;
+}
+
+.new-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  margin-bottom: -7%;
+}
+
+.new-item label {
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.new-item input {
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.new-item button {
+  background-color: #FFB6C1;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 20px;
+  width: 130px;
+  font-size: 18px;
+}
+
+.new-item button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .container3 {
@@ -126,8 +208,8 @@ span {
 
 .discount{
   font-family: 'Open Sans', sans-serif;
-  background-color: #008000;
-  color: white;
+  background-color: #FFB6C1;
+  color: black;
   padding: 15px 23px;
   font-size: 20px;
   border-radius: 5px;
@@ -135,16 +217,26 @@ span {
   cursor: pointer;
 }
 
+.discount:hover{
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .remove{
   font-family: 'Open Sans', sans-serif;
-  background-color: red;
-  color: white;
+  background-color: black;
+  color: #FFB6C1;
   padding: 15px 23px;
   font-size: 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   margin-left:6%;
+}
+
+.remove:hover{
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 600px) {
@@ -238,7 +330,9 @@ export default {
         { name: 'Delux shape paket 10 tretmana noge', price: '279€', originalPrice:279 },
         { name: 'Delux shape paket 10 tretmana trbuh', price: '146€', originalPrice:146 },
         { name: 'Delux shape full body 10 tretmana', price: '340€', originalPrice:340 }, ],
-
+        
+        newItemName: '',
+        newItemPrice: ''
 };
 },
 mounted() {
@@ -289,6 +383,34 @@ methods: {
     });
     this.appliedDiscount = false;
   }
+},
+
+addItem(pricelist, name, price, originalPrice) {
+  let item = { name: name, price: `${price}€`, originalPrice: `${price}`};
+  switch (pricelist) {
+    case 'items':
+      this.items.push(item);
+      break;
+    case 'items2':
+      this.items2.push(item);
+      break;
+    case 'items3':
+      this.items3.push(item);
+      break;
+    case 'items4':
+      this.items4.push(item);
+      break;
+    case 'items5':
+      this.items5.push(item);
+      break;
+    case 'items6':
+      this.items6.push(item);
+      break;
+    default:
+      console.error(`Invalid pricelist: ${pricelist}`);
+  }
+  this.newItemName = '';
+  this.newItemPrice = '';
 },
 },
 };
