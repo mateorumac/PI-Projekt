@@ -13,11 +13,11 @@
       </li>     
     </ul>
     <div class="new-item" v-if="isUserLoggedIn">
-      <label for="item-name">STAVKA:</label>
+      <label for="item-name">Stavka:</label>
       <input id="item-name" v-model="newItemName" type="text" />
-      <label for="item-price">CIJENA:</label>
+      <label for="item-price">Cijena:</label>
       <input id="item-price" v-model="newItemPrice" type="text" />
-      <button @click="addItem('items', newItemName, newItemPrice)">DODAJ</button>
+      <button @click="addItem('items', newItemName, newItemPrice)">Dodaj</button>
     </div>        
   </div>
 
@@ -30,11 +30,11 @@
       </li>      
     </ul>
     <div class="new-item" v-if="isUserLoggedIn">
-      <label for="item-name">STAVKA:</label>
+      <label for="item-name">Stavka:</label>
       <input id="item-name" v-model="newItemName" type="text" />
-      <label for="item-price">CIJENA:</label>
+      <label for="item-price">Cijena:</label>
       <input id="item-price" v-model="newItemPrice" type="text" />
-      <button @click="addItem('items2', newItemName, newItemPrice)">DODAJ</button>
+      <button @click="addItem('items2', newItemName, newItemPrice)">Dodaj</button>
     </div>
   </div>
 
@@ -47,11 +47,11 @@
       </li>     
     </ul>
     <div class="new-item" v-if="isUserLoggedIn">
-      <label for="item-name">STAVKA:</label>
+      <label for="item-name">Stavka:</label>
       <input id="item-name" v-model="newItemName" type="text" />
-      <label for="item-price">CIJENA:</label>
+      <label for="item-price">Cijena:</label>
       <input id="item-price" v-model="newItemPrice" type="text" />
-      <button @click="addItem('items3', newItemName, newItemPrice)">DODAJ</button>
+      <button @click="addItem('items3', newItemName, newItemPrice)">Dodaj</button>
     </div>
   </div>
 
@@ -64,11 +64,11 @@
       </li>     
     </ul>
     <div class="new-item" v-if="isUserLoggedIn">
-      <label for="item-name">STAVKA:</label>
+      <label for="item-name">Stavka:</label>
       <input id="item-name" v-model="newItemName" type="text" />
-      <label for="item-price">CIJENA:</label>
+      <label for="item-price">Cijena:</label>
       <input id="item-price" v-model="newItemPrice" type="text" />
-      <button @click="addItem('items4', newItemName, newItemPrice)">DODAJ</button>
+      <button @click="addItem('items4', newItemName, newItemPrice)">Dodaj</button>
     </div>
   </div>
 
@@ -81,11 +81,11 @@
       </li>      
     </ul>
     <div class="new-item" v-if="isUserLoggedIn">
-      <label for="item-name">STAVKA:</label>
+      <label for="item-name">Stavka:</label>
       <input id="item-name" v-model="newItemName" type="text" />
-      <label for="item-price">CIJENA:</label>
+      <label for="item-price">Cijena:</label>
       <input id="item-price" v-model="newItemPrice" type="text" />
-      <button @click="addItem('items5', newItemName, newItemPrice)">DODAJ</button>
+      <button @click="addItem('items5', newItemName, newItemPrice)">Dodaj</button>
     </div>
   </div>
 
@@ -98,11 +98,11 @@
       </li>     
     </ul>
     <div class="new-item" v-if="isUserLoggedIn">
-      <label for="item-name">STAVKA:</label>
+      <label for="item-name">Stavka:</label>
       <input id="item-name" v-model="newItemName" type="text" />
-      <label for="item-price">CIJENA:</label>
+      <label for="item-price">Cijena:</label>
       <input id="item-price" v-model="newItemPrice" type="text" />
-      <button @click="addItem('items6', newItemName, newItemPrice)">DODAJ</button>
+      <button @click="addItem('items6', newItemName, newItemPrice)">Dodaj</button>
     </div>
   </div>
 </template>
