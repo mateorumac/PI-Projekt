@@ -2,71 +2,47 @@
 <div class="slider">
   <div class="slide-track">
     <div class="slide">
-      <img src="leda.jpg" href="">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
-
+      <img src="leda.jpg">
     </div>
+
     <div class="slide">
       <img src="lice.jpg">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
     </div>
+
     <div class="slide">
       <img src="noga.jpg">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
     </div>
+
     <div class="slide">
       <img src="nokti.jpg">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
     </div>
+
     <div class="slide">
       <img src="guza.jpg">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
     </div>
 
     <div class="slide">
       <img src="leda.jpg">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
     </div>
+
     <div class="slide">
       <img src="lice.jpg">
     </div>
+
     <div class="slide">
       <img src="noga.jpg">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
     </div>
+
     <div class="slide">
       <img src="nokti.jpg">
     </div>
+
     <div class="slide">
       <img src="guza.jpg">
-      <div class="details">
-        <div class="content">
-          </div>
-      </div>
     </div>
   </div>
 </div>
+
       <div class="container1">
         <div class="row">
           
@@ -93,49 +69,50 @@
     
     </template>
 <style>
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-      * {
-        box-sizing: border-box;
-        
-      }
-      .container1 {
-        padding-top: 5%;
-        max-width: 100%;
-        margin: 0 auto;
-        padding-bottom: 1%;
-        
-      }
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+      
+* {
+  box-sizing: border-box;       
+  }
+
+.container1 {
+  padding-top: 5%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 1%;
+}
     
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-      .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-      }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
       
-      h2{
-        font-family: 'Open Sans', sans-serif;
-        margin-top: 7%;
-        margin-bottom: 35px;
-        font-size: 38px;     
-      }
+h2{
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 7%;
+  margin-bottom: 35px;
+  font-size: 38px;     
+}
 
-      .homepage {
-          font-size: 25px;
-          margin:5%;
-          font-family: 'Open Sans', sans-serif;
-      }
+.homepage {
+  font-size: 25px;
+  margin:5%;
+  font-family: 'Open Sans', sans-serif;
+}
 
-      img {
-        max-width: 80%;
-        height: auto;
-          }
-
-      
+img {
+  max-width: 80%;
+  height: auto;
+}
+     
 .slider {
   padding-top: 5%;  
   padding-bottom: 5%;
@@ -147,11 +124,13 @@
   place-items: center;
   overflow: hidden;
 }
+
 .slide-track {
   display: flex;
   width: calc(250px * 10);
   animation: scroll 40s linear infinite;
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -160,6 +139,7 @@
     transform: translateX(calc(-250px * 5));
   }
 }
+
 .slide {
   height: 200px;
   width: 250px;
@@ -168,13 +148,16 @@
   align-items: center;
   perspective: 100px;
 }
+
 img {
   width: 100%;
   transition: transform 1s;
 }
+
 img:hover {
   transform: translateZ(20px);
 }
+
 .slider::before,
 .slider::after {
   background: linear-gradient(
@@ -182,44 +165,21 @@ img:hover {
     rgba(255, 255, 255, 1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  content: " ";
-  height: 100%;
-  position: absolute;
-  width: 15%;
-  z-index: 2;
+  
 }
+
 .slider::before {
   left: 0;
   top: 0;
 }
+
 .slider::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
-}
-.details {
-  position: absolute;
-  top: 10px;
-  left: 25px;
-  bottom: 10px;
-  right: 10px;
-  width: 200px;
-  background: rgba(0, 0, 0, 0);
-  transform: scaleY(0);
-  transition: transform 0.5s;
-}
-.slide:hover .details {
-  transform: scaleY(1);
-}
-.details .content {
-  position: absolute;
-  top: 0%;
-  transform: translateY(8%);
-  text-align: center;
-  color: white;
-}    
+}  
 
-  .join-button {
+.join-button {
   padding: 20px 40px;
   background-color: #FFB6C1;
   color: black;
@@ -237,22 +197,20 @@ img:hover {
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-      @media (max-width: 600px) {
+@media (max-width: 600px) {
         
-        .left,
-        .right {
-          width: 100%;
-        }
-        .slider{
-          margin-top: 55px;
-          margin-bottom: 40px;
-        }
-        .join-button {
-          margin-bottom: 10px;
-        }
-      }
-
-    </style>
+  .left, .right {
+    width: 100%;
+  }
+  .slider{
+    margin-top: 55px;
+    margin-bottom: 40px;
+  }
+  .join-button {
+    margin-bottom: 10px;
+  }
+}
+</style>
 
 <script>
 export default {

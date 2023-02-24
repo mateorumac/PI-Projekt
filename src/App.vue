@@ -12,7 +12,7 @@
       <li><router-link to="/kontakt">KONTAKT</router-link></li>
       <li v-if="!isUserLoggedIn"><router-link to="/login">PRIJAVA</router-link></li>
       <li v-if="isUserLoggedIn">
-      <button class="logout" @click="logout">ODJAVA</button>  
+      <button class="logout" @click="logout">IZLAZ</button>  
       </li>
     </ul>
     
@@ -28,7 +28,7 @@
           <li @click="toggleNav"><router-link to="/kontakt">KONTAKT</router-link></li>
           <li v-if="!isUserLoggedIn" @click="toggleNav"><router-link to="/login">PRIJAVA</router-link></li>
           <li v-if="isUserLoggedIn">
-            <button class="logout" @click="logout">ODJAVA</button>  
+            <button class="logout" @click="logout">IZLAZ</button>  
           </li>
         </ul>
   </nav>
@@ -108,8 +108,7 @@ nav ul {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
-
-  &.router-link-exact-active {
+    &.router-link-exact-active {
       color: white;
   }
 }

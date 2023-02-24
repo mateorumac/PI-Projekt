@@ -28,77 +28,75 @@
 </template>
 
 <style>
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-      * {
-        box-sizing: border-box;
-        
-      }
-      .container2 {
-        max-width: 100%;
-        margin: 0 auto;
-      }
 
-      .rectangle {
-        margin-top: 4%;
-        margin-bottom: 7%;
-        margin-left: 25% ;
-        width: 450px;
-        height: 370px;
-        background-color: #FFB6C1;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px 2px #DCDCDC;
-      }
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-      .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-      }
-
-      .about{
-        margin:5%;
-        padding: 5%;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 25px;
-      }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
       
-      .left img {
-        max-width: 80%;
-        height: auto;
-        padding-left: 7%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        margin-left:-5%;
-      }
+.container2 {
+  max-width: 100%;
+  margin: 0 auto;
+}
 
-      .right img {
-        max-width: 80%;
-        height: auto;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-right: 5%;
-      }
+.rectangle {
+  margin-top: 4%;
+  margin-bottom: 7%;
+  margin-left: 25% ;
+  width: 450px;
+  height: 370px;
+  background-color: #FFB6C1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #DCDCDC;
+}
 
-      @media (max-width: 600px) {
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.about{
+  margin:5%;
+  padding: 5%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+}
+      
+.left img {
+  max-width: 80%;
+  height: auto;
+  padding-left: 7%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left:-5%;
+}
+
+.right img {
+  max-width: 80%;
+  height: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 5%;
+}
+
+@media (max-width: 600px) {
         
-        .left {
-          width: 100%;
-        }
-        .right {
-          width: 100%;
-          
-        }
-        .right img {
-          width: 100%;
-          margin-left: 8%;
-        }
-        .rectangle{
-          margin-left: -1%;
-          margin-bottom: 5%;
-        }       
-      }  
+  .left, .right {
+    width: 100%;
+  }
+    
+  .right img {
+    width: 100%;
+    margin-left: 8%;
+  }
+  
+  .rectangle{
+    margin-left: 0%;
+    margin-bottom: 7%;
+  }       
+}  
 </style>

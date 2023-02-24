@@ -17,6 +17,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 .container5 {
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@
   margin-bottom: 4.3%;
   margin-top: 4.3%;
 }
+
 .title {
   margin-bottom: 45px;
   font-size: 38px;
@@ -37,17 +39,20 @@
   color: #000000;
   font-family: 'Open Sans', sans-serif;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
+
 label {
   font-family: 'Open Sans', sans-serif;
   font-size: 23px;
   font-weight: bold;
   margin-bottom: 15px;
 }
+
 input {
   font-family: 'Open Sans', sans-serif;
   padding: 15px;
@@ -55,6 +60,7 @@ input {
   border-radius: 5px;
   border: 1px solid #ddd;
 }
+
 button[type="button"] {
   font-family: 'Open Sans', sans-serif;
   background-color: #FFB6C1;
@@ -66,6 +72,7 @@ button[type="button"] {
   cursor: pointer;
   margin-top: 30px;
 }
+
 button[type="button"]:hover {
   background-color: #ff99a8;
 }
@@ -109,7 +116,7 @@ export default {
       try {
         const response = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
         console.log("Uspješna prijava",response);
-        that.$router.replace({ name: 'home'});
+        that.$router.replace({ name: 'Cjenik'});
       } catch (error) {
         console.error("Došlo je do greške", error)
         alert("Unijeli ste pogrešnu E-mail adresu ili lozinku, molimo pokušajte ponovno");

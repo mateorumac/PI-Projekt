@@ -1,19 +1,17 @@
 <template>
-
   <div class="container3">
     <div class="buttons-container" v-if="isUserLoggedIn">
       <button class="discount" @click="discount1">Primjeni 10% popusta na sve </button>
       <button class="remove" @click="removeDiscount">Ukloni popust</button>              
       <button class="discount" @click="discount2" style="margin-left:6%;">Primjeni 20% popusta na sve</button>           
     </div>
-    <h1>Lice</h1>
+    <h1> Lice + Šminkanje </h1>
     <ul class="pricelist">
       <li v-for="(item, index) in items" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items.length - 1 }">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price }}</span>
       </li>     
-    </ul>
-       
+    </ul>      
   </div>
 
   <div class="container3">
@@ -56,7 +54,7 @@
     </ul>
   </div>
 
-  <div class="container3">
+  <div class="container31">
     <h1> Delux shape </h1>
     <ul class="pricelist">
       <li v-for="(item, index) in items6" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items6.length - 1 }">
@@ -65,25 +63,17 @@
       </li>     
     </ul>
   </div>
-
-  <div class="container31">
-    <h1> Šminkanje </h1>
-    <ul class="pricelist">
-      <li v-for="(item, index) in items7" :key="item.name" :class="{ 'item': true, 'no-bottom-border': index === items7.length - 1 }">
-        <span class="item-name">{{ item.name }}</span>
-        <span class="item-price">{{ item.price }}</span>
-      </li>     
-    </ul>
-  </div>  
 </template>
     
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 h1{
   font-family: 'Great Vibes', cursive;
   font-size: 45px;
 }
+
 .container3 {
   padding-top: 3%;
   padding-bottom: 0%;
@@ -133,6 +123,7 @@ span {
   margin-top: 1%;
   padding-bottom: 3%;
 }
+
 .discount{
   font-family: 'Open Sans', sans-serif;
   background-color: #008000;
@@ -184,14 +175,12 @@ span {
   padding-bottom: 3%;
 }
 }
-
 </style>
 
 <script>
 import firebase from '@/firebase';
 
 export default {
-
   data() {
     return {
       isUserLoggedIn: false,
@@ -200,7 +189,10 @@ export default {
         { name: 'Njega lica', price: '27€', originalPrice: 27 },
         { name: 'Anti-age njega lica', price: '34€', originalPrice:34},
         { name: 'Dubinsko čišćenje lica', price: '34€', originalPrice:34},
-        { name: 'Anti-age dubinsko čišćenje lica', price: '47€',originalPrice:47}, ],
+        { name: 'Anti-age dubinsko čišćenje lica', price: '47€',originalPrice:47},
+        { name: 'Brow lift', price: '30€', originalPrice:30 },
+        { name: 'Šminkanje', price: '27€' , originalPrice:27},
+        { name: 'Šminkanje + trepavice', price: '34€' , originalPrice:34}, ],
 
       items2: [
         { name: 'Manikura', price: '11€', originalPrice:11},
@@ -247,11 +239,6 @@ export default {
         { name: 'Delux shape paket 10 tretmana trbuh', price: '146€', originalPrice:146 },
         { name: 'Delux shape full body 10 tretmana', price: '340€', originalPrice:340 }, ],
 
-        items7: [ 
-        { name: 'Šminkanje', price: '27€' , originalPrice:27},
-        { name: 'Šminkanje + trepavice', price: '34€' , originalPrice:34},
-        { name: 'Brow lift', price: '30€', originalPrice:30 }, ]
-
 };
 },
 mounted() {
@@ -266,26 +253,21 @@ mounted() {
 methods: {
     discount1() {
   if (!this.appliedDiscount) {
-    let itemsArray = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6, this.items7];
-
+    let itemsArray = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6];
     itemsArray.forEach(items => {
       items.forEach(item => {
         let [price, currency] = item.price.split(" ");
         price = Number(price.slice(0, -1));
         price = (price * 0.9).toFixed(2);
         item.price = `${price}€`;
-      });
-      localStorage.setItem(`items${itemsArray.indexOf(items) + 1}`, JSON.stringify(items));
+      });   
     });
-
-    this.appliedDiscount = true;
-    localStorage.setItem("appliedDiscount", JSON.stringify(this.appliedDiscount));
+    this.appliedDiscount = true;   
   }
 },
     discount2() {
   if (!this.appliedDiscount) {
-    let itemsArray = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6, this.items7];
-
+    let itemsArray = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6];
     itemsArray.forEach(items => {
       items.forEach(item => {
         let [price, currency] = item.price.split(" ");
@@ -293,28 +275,21 @@ methods: {
         price = (price * 0.8).toFixed(2);
         item.price = `${price}€`;
       });
-      localStorage.setItem(`items${itemsArray.indexOf(items) + 1}`, JSON.stringify(items));
     });
-
     this.appliedDiscount = true;
   }
 },
     removeDiscount() {
   if (this.appliedDiscount) {
-    const items = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6, this.items7];
+    const items = [this.items, this.items2, this.items3, this.items4, this.items5, this.items6];
     items.forEach(itemList => {
       itemList.forEach(item => {
         item.price = item.originalPrice + '€';
       });
-      localStorage.setItem(`items${itemList === this.items ? '' : itemList.indexOf(itemList) + 2}`, JSON.stringify(itemList));
     });
     this.appliedDiscount = false;
   }
 },
-created() {
-  this.items = JSON.parse(localStorage.getItem("items")) || this.items;
-  this.appliedDiscount = JSON.parse(localStorage.getItem("appliedDiscount")) || false;
-}
 },
 };
 </script>
